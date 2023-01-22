@@ -13,6 +13,20 @@ body header {
 
 body header nav {
     padding: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.timeleft {
+    display: flex;
+    width: 20%;
+    flex-direction: row;
+}
+
+body header nav span h3 {
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
 }
 
 main {
@@ -22,7 +36,7 @@ main {
 }
 
 ul {
-    display: flex;
+    display: none; /* we will change display after quiz is initiated */
     flex-direction: column;
     list-style: none;
     align-items: center;
@@ -35,7 +49,13 @@ li {
     padding-bottom: 10px;
     padding-left: 20px;
     padding-right: 20px;
+    user-select: none; /* prevents user from highlighting the text */
     background-color: #3c3c3c;
+    border-radius: 15px;
+}
+
+li:hover {
+    background-color: #29abf6ef;
 }
 
 .quiz-content {
@@ -43,15 +63,62 @@ li {
     flex-direction: column;
     margin-top: 90px;
     background-color: #1a1a1a;
+    border-radius: 10px;
     width: 50%;
     height: 50vh;
 }
 
+main div button {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex; 
+    align-self: center;
+}
+
+.startQuiz {
+    background-color: #3c3c3c;
+    user-select: none;
+    display: flex; /* we will change display after quiz is initiated */
+    font-size: 20px;
+    color: #d5d5d5;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    border: none;
+    border-radius: 15px;
+}
+
+.back-button {
+    background-color:#1a1a1a;
+    user-select: none;
+    display: flex; /* we will change display after quiz is initiated */
+    font-size: 20px;
+    color: #d5d5d5;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    border: none;
+    border-radius: 15px;
+}
+
+.back-button:hover {
+    background-color: #29abf6ef;
+}
+
+.startQuiz:hover {
+    background-color: #29abf6ef;
+}
+
 .quiz-content h2 {
-    display: flex;
+    display: none; /* we will change display after quiz is initiated */
     text-align: center;
+    user-select: none;
     justify-content: center;
-    font-size: 36px;
+    font-size: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .THE-LINE {
@@ -62,7 +129,47 @@ li {
 }
 
 
+.win-form {
+    display: none; /* we will change display after quiz is completed */
+    align-self: center;
+    margin-top: 40px;
+    padding: 10px;
+    background-color: #3c3c3c;
+    font-size: 35px;
+    color: #d5d5d5;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    border: none;
+    border-radius: 15px;
+}
 
+.lose-form {
+    display: none; /* we will change display after quiz is completed */
+    align-self: center;
+    margin-top: 40px;
+    padding: 10px;
+    background-color: #3c3c3c;
+    font-size: 35px;
+    color: #d5d5d5;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    border: none;
+    border-radius: 15px;
+}
+
+.high-scores {
+    width: 70%;
+    display: none;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.high-scores nav {
+    display: flex;
+    flex-direction: row;
+}
 
 
 /* footer {

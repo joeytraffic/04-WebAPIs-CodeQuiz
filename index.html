@@ -10,29 +10,46 @@
 <body>
     <header>
         <nav>
-            <span>View Highscores</span>
-            <span id="timeLeft"></span>
+            <span id="view-scores" class="view-scores">View Highscores</span>
+            <span>
+                <h3 id="timeLeft" class="timer-count"></h3>
+            </span>
         </nav>
     </header>
     <main>
         <div class="quiz-content" id="quiz-content">
-            <h2 id="question">sample</h2>
-            <div class="THE-LINE"></div>
+            <button class="startQuiz" id="startQuiz">Start Quiz</button>
+            <h2 id="question"></h2>
+            <div class="THE-LINE" id="THE-LINE"></div>
             <ul id="answers">
-                <li class="card" id="card1">1: </li>
-                <li class="card" id="card2">2: </li>
-                <li class="card" id="card3">3: </li>
-                <li class="card" id="card4">4: </li>
+                <li class="answer1" id="card1"></li>
+                <li class="answer2" id="card2"></li>
+                <li class="answer3" id="card3"></li>
+                <li class="answer4" id="card4"></li>
             </ul>
+            <form class="win-form" id="win-form">
+                <label for="initials">Congrats! You win! Please enter your initials:</label>
+                <input id="name" placeholder="type here">
+                <input type="submit" value="Submit">
+            </form>
+            <form class="lose-form" id="lose-form">
+                <label for="initials">Aww, you lost, but you can still enter your score. Please enter your initials:</label>
+                <input id="name" placeholder="type here">
+                <input type="submit" value="Submit">
+            </form>
+            
         </div>
-        <!-- <div class="high-scores" id="high-scores">
-            <h2>Leaderboards</h2>
+        <div class="high-scores" id="high-scores">
+            
+            <nav>
+                <h2>Leaderboards:</h2>
+            </nav>
+            <button class="back-button" id="back-button">Back</button>
             <ul class="players">
                 <li class="player"></li>
             </ul>
-        </div> -->
+        </div>
     </main>
-
-    <!-- <footer></footer> -->
+    <script src="assets/script.js"></script>
 </body>
 </html>
