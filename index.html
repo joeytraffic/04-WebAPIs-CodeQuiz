@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Javascript Quiz!!!</title>
     <link rel="stylesheet" href="assets/style.css" />
 </head>
+
 <body>
     <header>
         <nav>
@@ -27,29 +29,30 @@
                 <li class="answer3" id="card3"></li>
                 <li class="answer4" id="card4"></li>
             </ul>
-            <form class="win-form" id="win-form">
-                <label for="initials">Congrats! You win! Please enter your initials:</label>
+            <form class="form" id="form">
+                <label for="initials">All done! please enter your initials:</label>
                 <input id="name" placeholder="type here">
-                <input type="submit" value="Submit">
+                <button id="submit">Submit</button>
             </form>
-            <form class="lose-form" id="lose-form">
-                <label for="initials">Aww, you lost, but you can still enter your score. Please enter your initials:</label>
-                <input id="name" placeholder="type here">
-                <input type="submit" value="Submit">
-            </form>
-            
+
         </div>
         <div class="high-scores" id="high-scores">
-            
-            <nav>
-                <h2>Leaderboards:</h2>
-            </nav>
-            <button class="back-button" id="back-button">Back</button>
-            <ul class="players">
-                <li class="player"></li>
-            </ul>
+            <span>
+                <button class="back-button" id="back-button">Back</button>
+                <nav>
+                    <h2>Leaderboards:</h2>
+                </nav>
+            </span>
+            <ol class="players">
+                <li class="player" id="player1"><span id="score1"></span></li>
+                <li class="player" id="player2"><span id="score2"></span></li>
+                <li class="player" id="player3"><span id="score3"></span></li>
+                <li class="player" id="player4"><span id="score4"></span></li>
+                <li class="player" id="player5"><span id="score5"></span></li>
+            </ol>
         </div>
     </main>
     <script src="assets/script.js"></script>
 </body>
+
 </html>

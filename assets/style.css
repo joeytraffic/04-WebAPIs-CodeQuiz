@@ -1,7 +1,8 @@
 body {
     padding: 0px;
     margin: 0px;
-    background-color: #3c3c3c;
+    background: linear-gradient(#444444, #1c1c1c);
+    height: 100vh;
     color: #d5d5d5;
     font-size: 25px;
 }
@@ -35,26 +36,26 @@ main {
     align-items: center;
 }
 
-ul {
-    display: none; /* we will change display after quiz is initiated */
+main div ul {
+    display: none;
     flex-direction: column;
     list-style: none;
     align-items: center;
     justify-content: space-between;
 }
 
-li {
+main div ul li {
     margin-top: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 20px;
     padding-right: 20px;
-    user-select: none; /* prevents user from highlighting the text */
+    user-select: none;
     background-color: #3c3c3c;
     border-radius: 15px;
 }
 
-li:hover {
+main div ul li:hover {
     background-color: #29abf6ef;
 }
 
@@ -73,14 +74,14 @@ main div button {
     margin-bottom: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
-    display: flex; 
+    display: flex;
     align-self: center;
 }
 
 .startQuiz {
     background-color: #3c3c3c;
     user-select: none;
-    display: flex; /* we will change display after quiz is initiated */
+    display: flex;
     font-size: 20px;
     color: #d5d5d5;
     flex-direction: column;
@@ -91,9 +92,9 @@ main div button {
 }
 
 .back-button {
-    background-color:#1a1a1a;
+    background-color: #1a1a1a;
     user-select: none;
-    display: flex; /* we will change display after quiz is initiated */
+    display: flex;
     font-size: 20px;
     color: #d5d5d5;
     flex-direction: column;
@@ -112,7 +113,7 @@ main div button {
 }
 
 .quiz-content h2 {
-    display: none; /* we will change display after quiz is initiated */
+    display: none;
     text-align: center;
     user-select: none;
     justify-content: center;
@@ -129,8 +130,8 @@ main div button {
 }
 
 
-.win-form {
-    display: none; /* we will change display after quiz is completed */
+form {
+    display: none;
     align-self: center;
     margin-top: 40px;
     padding: 10px;
@@ -144,26 +145,12 @@ main div button {
     border-radius: 15px;
 }
 
-.lose-form {
-    display: none; /* we will change display after quiz is completed */
-    align-self: center;
-    margin-top: 40px;
-    padding: 10px;
-    background-color: #3c3c3c;
-    font-size: 35px;
-    color: #d5d5d5;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    border: none;
-    border-radius: 15px;
-}
 
 .high-scores {
     width: 70%;
     display: none;
-    justify-content: space-between;
-    align-self: center;
+    user-select: none;
+    flex-direction: column;
 }
 
 .high-scores nav {
@@ -172,7 +159,14 @@ main div button {
 }
 
 
-/* footer {
-    padding: 0px;
-    background-color: #1a1a1a;
-} */
+.view-scores {
+    user-select: none;
+}
+
+.players {
+    list-style: none;
+}
+
+.player {
+    user-select: none;
+}
