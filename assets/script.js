@@ -40,11 +40,7 @@ var answer4b = "pulling";
 var answer4c = "hoisting";
 var answer4d = "yoinking";
 
-
 var submit = document.querySelector("#submit");
-
-
-
 
 var li1 = document.createElement("li");
 var li2 = document.createElement("li");
@@ -53,10 +49,10 @@ var li4 = document.createElement("li");
 
 var newItem = document.querySelector(".players");
 
-function renderLeaderboard() {
-    var initials = localStorage.getItem("initials");
-    var score = localStorage.getItem("score")
+var initials = localStorage.getItem("initials");
+var score = localStorage.getItem("score");
 
+function renderLeaderboard() {
     if (!initials || !score) {
         return;
     }
@@ -66,8 +62,6 @@ function renderLeaderboard() {
         li1.textContent = "Player: " + player[0] + "  |  Score: " + player[1];
         newItem.appendChild(li1);
     }
-
-
     addPlayer();
 }
 
@@ -87,6 +81,7 @@ submit.addEventListener("click", function (event) {
         li1.textContent = "Player: " + player[0] + "  |  Score: " + player[1];
         newItem.appendChild(li1);
     }
+    addPlayer();
     document.getElementById("form").style.display = "none";
 }
 )
@@ -133,7 +128,6 @@ function startTimer() {
 function wrongAnswer() {
     timerCount = timerCount - 5;
     timerElement.textContent = timerCount;
-
 }
 
 function correctAnswer() {
@@ -144,7 +138,7 @@ function correctAnswer() {
 
 function advance1() {
     correctAnswer();
-    wrongAnswer(); // This is to undo the adding of 5 seconds to the timer
+    wrongAnswer(); // This is to undo the adding of 5 seconds to the timer after answering the first question.
     quiz2();
 }
 function advance2() {
@@ -234,8 +228,8 @@ function showHighScores() {
     document.getElementById("quiz-content").style.display = "none";
     document.getElementById("timeLeft").style.display = "none";
     document.getElementById("back-button").style.display = "flex";
-    document.getElementById("player1").style.display = "flex"
-    backButton.addEventListener("click", goBack)
+    document.getElementById("player1").style.display = "flex";
+    backButton.addEventListener("click", goBack);
 }
 
 function goBack() {

@@ -53,6 +53,7 @@ main div ul li {
     user-select: none;
     background-color: #3c3c3c;
     border-radius: 15px;
+    cursor: pointer;
 }
 
 main div ul li:hover {
@@ -89,6 +90,7 @@ main div button {
     width: 20%;
     border: none;
     border-radius: 15px;
+    cursor: pointer;
 }
 
 .back-button {
@@ -102,6 +104,7 @@ main div button {
     width: 20%;
     border: none;
     border-radius: 15px;
+    cursor: pointer;
 }
 
 .back-button:hover {
@@ -161,6 +164,7 @@ form {
 
 .view-scores {
     user-select: none;
+    cursor: pointer;
 }
 
 .players {
