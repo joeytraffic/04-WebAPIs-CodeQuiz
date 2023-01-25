@@ -12,4 +12,5 @@ user will still be allowed to submit their score.
 ```
 
 The following is an example of the main page: 
+
 ![](./Assets/website-example.png)
